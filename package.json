@@ -1,0 +1,25 @@
+{
+  "name": "online-job-portal-api",
+  "version": "1.0.0",
+  "description": "Node js,Koa js and sequelize orm based api allow user to post jobs or access all available postings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnperera/online-job-portal-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnperera/online-job-portal-api/issues"
+  },
+  "homepage": "https://github.com/dnperera/online-job-portal-api#readme",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
+  }
+}
