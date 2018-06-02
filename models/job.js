@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
 				allowNull: false,
 			},
 		});
+		Job.belongsToMany(models.Candidate, {
+			through: 'Application',
+		});
 	};
 	return Job;
 };
