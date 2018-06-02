@@ -14,7 +14,9 @@ module.exports = {
 
 	async find(ctx) {
 		try {
-			ctx.body = await ctx.db.Company.findAll({});
+			ctx.body = await ctx.db.Company.findAll({
+				include: [{ model: ctx.db.Job }],
+			});
 		} catch (err) {
 			ctx.thow(500, err);
 		}
@@ -44,6 +46,30 @@ module.exports = {
 			results === 0
 				? ctx.throw(404, 'Company not found !!')
 				: `Compamy is deleted with id ${ctx.params.id}`;
+			ctx.body = results;
+		} catch (err) {
+			ctx.throw(500, err);
+		}
+	},
+
+	async update(ctx) {
+		try {
+			const results = await ctx.db.Company.update(
+				{
+					name: ctx.request.body.name,
+					city: ctx.request.body.city,
+					address: ctx.request.body.address,
+				},
+				{
+					where: {
+						id: ctx.params.id,
+					},
+				}
+			);
+
+			results === 0
+				? ctx.throw(404, 'Company not found !!')
+				: `Company was updated with id ${ctx.params.id}`;
 			ctx.body = results;
 		} catch (err) {
 			ctx.throw(500, err);

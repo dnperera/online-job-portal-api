@@ -13,7 +13,7 @@ db.sequelize
 	.then(() => console.log('Database models synced!!!'))
 	.catch(err => console.log('Error in DB sync --', err));
 
-//add db variable to context
+//add db variable to context ,so that  models can be accessed
 app.context.db = db;
 app.use(bodyParser()); //add middleware body parser
 app.use(router.routes()); // register routes as middleware
