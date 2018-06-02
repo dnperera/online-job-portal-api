@@ -3,9 +3,7 @@ module.exports = (sequelize, DataTypes) => {
 	var Application = sequelize.define(
 		'Application',
 		{
-			status_id: {
-				type: DataTypes.INTEGER,
-			},
+			status_id: DataTypes.INTEGER,
 		},
 		{}
 	);
