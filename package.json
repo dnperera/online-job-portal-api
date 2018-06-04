@@ -1,11 +1,13 @@
 {
   "name": "online-job-portal-api",
   "version": "1.0.0",
-  "description": "Node js,Koa js and sequelize orm based api allow user to post jobs or access all available postings",
+  "description":
+    "Node js,Koa js and sequelize orm based api allow user to post jobs or access all available postings",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "doc": "apidoc -i controllers -o public/"
   },
   "repository": {
     "type": "git",

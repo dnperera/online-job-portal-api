@@ -1,4 +1,5 @@
 const Koa = require('koa');
+const serve = require('koa-static');
 const bodyParser = require('koa-bodyparser');
 const _ = require('lodash');
 const db = require('./models');
@@ -6,6 +7,9 @@ const router = require('./routes');
 const PORT = 8000;
 
 const app = new Koa();
+
+//set the static middle ware
+app.use(serve(__dirname + '/public/'));
 
 //create or sync models in db
 db.sequelize

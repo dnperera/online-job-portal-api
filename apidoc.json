@@ -1,0 +1,8 @@
+{
+	"name": "Online Job Portal API Documentation",
+	"version": "1.0.0",
+	"description": "Registered user can add companies and post jobs with use of this API",
+	"template": {
+		"forcelanguage": "en"
+	}
+}
