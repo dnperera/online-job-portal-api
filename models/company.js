@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
 	Company.associate = models => {
 		// associations can be defined here
 		Company.hasMany(models.Job);
+		Company.belongsTo(models.User);
 	};
 	return Company;
 };

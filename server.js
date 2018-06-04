@@ -9,7 +9,7 @@ const app = new Koa();
 
 //create or sync models in db
 db.sequelize
-	.sync()
+	.sync({ force: true })
 	.then(() => console.log('Database models synced!!!'))
 	.catch(err => console.log('Error in DB sync --', err));
 
