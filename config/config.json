@@ -4,7 +4,8 @@
     "password": "dphp94903",
     "database": "online-job-portal",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "secret": "MadolaMultiPlantation2009"
   },
   "test": {
     "username": "root",
