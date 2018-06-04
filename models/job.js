@@ -4,6 +4,9 @@ module.exports = (sequelize, DataTypes) => {
 		'Job',
 		{
 			title: DataTypes.STRING,
+			description: DataTypes.TEXT,
+			responsibilities: DataTypes.TEXT,
+			skills: DataTypes.TEXT,
 		},
 		{}
 	);

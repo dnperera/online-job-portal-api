@@ -11,6 +11,9 @@ module.exports = {
 
 			ctx.body = await ctx.db.Job.create({
 				title: ctx.request.body.title,
+				description: ctx.request.body.description,
+				responsibilities: ctx.request.body.responsibilities,
+				skills: ctx.request.body.skills,
 				CompanyId: ctx.request.body.CompanyId,
 			});
 		} catch (err) {
