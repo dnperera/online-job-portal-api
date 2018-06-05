@@ -1,4 +1,30 @@
 module.exports = {
+	/**
+	 * @api {post} /companies Register A Company
+	 *@apiGroup Companies
+	 *@apiName createCompany
+	 *@apiParam {String} [name] Name of the company.
+	 *@apiParam {String} [city] City of the company located.
+	 *@apiParam {String} [address] Street address of the company
+	 *@apiParam {Number} [UserId]  Loged in user's id
+	 *
+	 *{
+	 * "name": 'AutoDesk',
+	 * "city":"San Rafael",
+	 * "address":"3900 civiccenter drive,san rafael,ca94903"
+	 *}
+	 *
+	 * @apiSuccess {object} Company A newly created company object.
+	 *@apiHeader {String} Authorization-Token JWT Authorization header.
+	 *@apiHeaderExample {json} Request Authorization Header
+	 *{
+	 *	"authorization":"gkskkvkgkfkls340444004400ldlcgrynb"
+	 *}
+	 *
+	 *@apiExample {curl} Example usage:
+	 *curl -i http://localhost:8000/companies
+	 *@apiDescription Authorised user can register companies
+	 */
 	async create(ctx) {
 		try {
 			//create new record
